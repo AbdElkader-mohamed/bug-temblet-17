@@ -1,0 +1,25 @@
+
+* {
+  scroll-behavior: smooth;
+  color: $black-color;
+  font-family: 'Outfit', sans-serif;
+  font-size:$font-16;
+  font-style: normal;
+  font-weight: $fw-500;
+  line-height: normal;
+
+  &::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $white-color;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 10px;
+  }
+}

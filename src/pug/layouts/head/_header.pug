@@ -1,0 +1,21 @@
+// start header
+header.header
+    nav.no-background
+      .container 
+        .header__wrapper
+          a(class='navbar-brand',href="#") 
+            img(src="./images/logo-light.webp", alt="logo")
+          |
+          button(type="button",  ,class="btn d-block d-md-none navbar-toggle") 
+            i(class="bi bi-list")
+          .collapse-nav#collapse-nav
+            img(src="./images/logo.webp", class="img-fluid d-block d-md-none" alt="logo")
+            button(type="button" , class="btn d-block d-md-none navbar-toggle")
+              i(class="bi bi-x")
+            ul(class="header__wrapper__list nav")
+              each val,key in navbarItems 
+                li.nav-item
+                  a(href=`#${key}` class="nav-link")= val 
+
+
+//end header

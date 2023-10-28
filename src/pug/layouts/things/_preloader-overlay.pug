@@ -1,0 +1,23 @@
+
+//- overlay-screen
+// start overlay 
+div(class="overlay-screen")
+// end overlay 
+// end preloader 
+#preloader
+  #anaton-preloader.anaton-preloader
+    .animation-preloader
+      .spinner
+      .txt-loading
+        span(data-text-preloader="A", class="letters-loading") A 
+        span(data-text-preloader="N", class="letters-loading") N 
+        span(data-text-preloader="A", class="letters-loading") A 
+        span(data-text-preloader="T", class="letters-loading") T 
+        span(data-text-preloader="O", class="letters-loading") O 
+        span(data-text-preloader="N", class="letters-loading") N 
+    .loader
+      .row
+        - for (i = 0 ; i < 4 ; i++)
+          .col-3.loader-section.section-left
+            .bg
+

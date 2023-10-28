@@ -1,0 +1,109 @@
+/*------- 
+  header
+---------*/ 
+.header {
+  nav {
+    padding: 10px 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: $primary-color !important;
+    border-bottom: 1px solid $border-color;
+    transition: all 0.3 linear ;
+    &.no-background {
+      background: transparent !important;
+      border-bottom: none;
+    }
+    &.sticked {
+      position: fixed !important;
+      width: 100%;
+      top: 0;
+      animation: 0.7s ease-in-out 0s normal none 1 running fadeInDown;
+      z-index: 8000;
+      @include keyFrames(fadeInDown) {
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+    @include responsive(max,767px) {
+    padding: 10px 20px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .navbar-brand {
+      display: block;
+      & > img{
+        height: 60px;
+      }
+    }
+    .navbar-toggle {
+      padding: 25px 0;
+      i {
+        color: $white-color;
+        font-size: 35px;
+      }
+    }
+    .collapse-nav {
+      @include responsive(max,767px) {
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        padding: 30px;
+        height: 100vh;
+        background-color: $white-color;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in;
+        &.collapsed {
+          transform: translateX(0);
+        }
+      }
+      .nav {
+      @include responsive(max,767px) {
+        flex-direction: column;
+      }
+      }
+      > img {
+        margin-bottom: 30px;
+        height: 60px;
+      }
+      > .navbar-toggle {
+        position: absolute;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        right: 30px;
+        top: 45px;
+        border: 2px solid $border-color2;
+        border-radius: 50%;
+        i {
+          font-size: 29px !important;
+          color: $black-color;
+        }
+      }
+    }
+    .nav-link {
+      padding: 30px 15px;
+      text-transform: capitalize;
+      color: $white-color !important;
+      @include responsive(max,767px) {
+        color: $black-color !important;
+        padding: 13px 0px;
+        border-bottom: solid 1px $border-color2;
+      }
+    }
+  }
+}

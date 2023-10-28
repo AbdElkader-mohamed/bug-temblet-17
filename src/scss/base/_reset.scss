@@ -1,0 +1,74 @@
+p {
+  margin-bottom: 0;
+  color: #ccc;
+  margin: 0 0 15px;
+  font-weight: $fw-400;
+  line-height: 1.7;
+}
+
+body {
+  background-color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+  color: $black-color;
+}
+
+.form-control:focus,
+.btn:focus{
+  box-shadow: none;
+}
+
+section {
+  overflow: hidden;
+  padding: 120px 0;
+}
+
+.container {
+  @include responsive(min,1250px){
+    max-width: 1250px;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+i {
+  font-size: inherit;
+}
+
+a,.nav-link {
+  text-decoration: none;
+  color: $white-color;
+}
+
+img {
+  object-fit: cover;
+}
+
+textarea {
+  resize: none;
+}
+textarea:focus,
+input:not([type="radio"]):focus {
+  outline-color: $black-color !important;
+  border-color:$black-color !important;
+  box-shadow: none !important;
+}
+.form-check-input,
+.form-select {
+  box-shadow: none !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-transform: capitalize;
+  color: $black-color;
+  line-height: 1;
+  font-weight: $fw-500;
+  margin-bottom: 0;
+}
+
+

@@ -1,0 +1,15 @@
+$s: right;
+$e: left;
+
+$p: -1;
+$n: 1;
+
+body {
+  direction: rtl;
+}
+
+[type=tel],
+[type=email],
+[type=number] {
+    direction: rtl;
+}

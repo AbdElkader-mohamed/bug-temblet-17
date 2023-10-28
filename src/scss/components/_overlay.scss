@@ -1,0 +1,13 @@
+/*--------------------
+  overlay
+-----------------------*/ 
+.overlay-screen.opened {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba($black-color, 0.2);
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  transition: all 0.25s ease-in-out;
+}

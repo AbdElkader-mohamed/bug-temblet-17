@@ -1,0 +1,90 @@
+include ./abstracts/_variables.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document 
+    link(rel="shortcut icon", href="", type="image/x-icon")
+    //- styles 
+    include ./layouts/head/_links.pug
+  body 
+    //- preloader & overlay-screen
+    include ./layouts/things/_preloader-overlay.pug
+    //- header 
+    include ./layouts/head/_header.pug
+
+    // start hero section 
+    section.images__hero#home 
+      div(class="images__hero__bg",style={"background-image": "url(./images/banner-9.webp)"})
+      .images__hero__banner
+        .container 
+          .images__hero__banner__content 
+            .row 
+              .col-12 
+                h2 digital business <br> 
+                  <strong style=background-image:url(./images/banner-8.webp) > ideas </strong>
+          .images__hero__banner__img 
+            img(src="./images/4-1.webp",class="img-fluid" , alt="")
+            ul.images__hero__banner__info 
+              li 
+                h5 mail us 
+                a(href="mailto:anabogy@gmail.com") anabogy@gmail.com
+              li 
+                h5 call us 
+                a(href="tell:01030943535") 01030943535
+    // end hero section 
+    // start services section 
+    section.services#services
+      .container 
+        .row.justify-content-center
+          .col-8 
+            .main-title.text-center
+              h5.sub-heading our services 
+              h2.heading= "All Professional We’re Offering Best Solutions & Services"
+          .col-12 
+            .services__boxes 
+              each data in boxItems
+                .services__boxes__box 
+                  h4 #[a(href="#")= data.head]
+                  p= data.text 
+                  |
+                  | #[img(src=data.src, alt="img")]
+    // end services section
+    // start about section 
+    section.about#about 
+      .container 
+        .row.align-items-center
+          .col-lg-6 
+            .about__imgs 
+              img(src="./images/sm.webp", class="sm-img img-fluid" alt="")
+              img(src="./images/big.webp", class="big-img img-fluid" alt="")
+              .rotate 
+                svg(xmlns="http://www.w3.org/2000/svg",viewBox="0 0 150 150" version="1.1") 
+                  path(id="textPath", d="M 0,75 a 75,75 0 1,1 0,1 z") 
+                  text #[textPath(href="#textPath") Award Winning Agency ]
+                img(src="./images/logo-icon.webp", class="centered-img" alt="")
+          .col-lg-5.offset-lg-1 
+            .about__text 
+              h2 The best creative process behind our marketing.
+              h5 Our goal is to make it as easy as possible for you to walk away with the solution that suits your needs perfectly.
+              p Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument out reasonably. Again keeps at no meant stuff. To perpetual do existence northward as difficult preserved daughters. 
+              .button-more 
+                a(href="#") know more #[i(class="bi bi-arrow-up-right")]
+    // end about section 
+    // start Projects section 
+    section.projects#projects
+      .container 
+        .row
+          .col-8 
+            .main-title
+              h5.sub-heading LATEST PROJECTS 
+              h2.heading= "Our Completed Projects"
+          .col-12 
+
+    // end Projects section 
+    //- scripts 
+    include ./layouts/footer/_scripts.pug
+    

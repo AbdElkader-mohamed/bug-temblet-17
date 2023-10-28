@@ -1,0 +1,17 @@
+
+// responsive media 
+
+@mixin responsive($type,$size) {
+  @media (#{$type}-width: $size) {
+    @content;
+  }
+}
+
+// main animation 
+
+@mixin keyFrames($name){
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
